@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog &mdash; Treasure Mayowa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #ffffff;
+    --bg2: #f7f7f5;
+    --ink: #111110;
+    --ink2: #555551;
+    --ink3: #999994;
+    --blue: #2563eb;
+    --blue-hover: #1d4ed8;
+    --blue-bg: #eff6ff;
+    --blue-border: #bfdbfe;
+    --border: #e8e8e4;
+    --sans: "Inter", system-ui, sans-serif;
+    --serif: "Lora", Georgia, serif;
+  }
+  html { scroll-behavior: smooth; font-size: 15px; }
+  body { font-family: var(--sans); background: var(--bg); color: var(--ink); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+  .page { max-width: 780px; margin: 0 auto; padding: 0 2rem; }
+  nav { padding: 1.6rem 0; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); margin-bottom: 3.5rem; }
+  .nav-name { font-size: 0.88rem; font-weight: 500; color: var(--ink); text-decoration: none; letter-spacing: 0.01em; }
+  .nav-links { display: flex; gap: 1.6rem; list-style: none; }
+  .nav-links a { font-size: 0.82rem; color: var(--ink3); text-decoration: none; transition: color 0.15s; }
+  .nav-links a:hover { color: var(--blue); }
+  .nav-links a.active { color: var(--blue); }
+  .page-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+  h1 { font-family: var(--serif); font-size: 2.1rem; font-weight: 400; line-height: 1.2; letter-spacing: -0.01em; color: var(--ink); margin-bottom: 0.75rem; }
+  .page-desc { font-size: 0.92rem; color: var(--ink3); max-width: 480px; line-height: 1.7; }
+  .post-list { display: flex; flex-direction: column; }
+  .post-item { padding: 1.4rem 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1fr auto; align-items: start; gap: 1.5rem; }
+  .post-item:first-child { border-top: 1px solid var(--border); }
+  .post-title { font-size: 0.98rem; font-weight: 500; color: var(--ink); text-decoration: none; display: block; margin-bottom: 0.3rem; transition: color 0.15s; }
+  .post-title:hover { color: var(--blue); }
+  .post-excerpt { font-size: 0.84rem; color: var(--ink3); line-height: 1.6; max-width: 520px; }
+  .post-tag { font-size: 0.7rem; color: var(--blue); background: var(--blue-bg); border: 1px solid var(--blue-border); padding: 2px 8px; border-radius: 3px; white-space: nowrap; font-weight: 500; }
+  .post-date { font-size: 0.78rem; color: var(--blue); white-space: nowrap; font-variant-numeric: tabular-nums; margin-top: 0.5rem; text-align: right; }
+  .post-meta { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; flex-shrink: 0; }
+  .empty-state { padding: 3rem 0; text-align: center; }
+  .empty-state p { font-size: 0.9rem; color: var(--ink3); font-family: var(--serif); font-style: italic; }
+  footer { border-top: 1px solid var(--border); padding: 1.5rem 0 3rem; font-size: 0.75rem; color: var(--ink3); display: flex; justify-content: space-between; margin-top: 2rem; }
+  footer a { color: var(--blue); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="page">
+  <nav>
+    <a href="index.html" class="nav-name">Treasure Mayowa</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#publications">Publications</a></li>
+      <li><a href="index.html#news">News</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <h1>Blog</h1>
+    <p class="page-desc">Occasional writing on tech, research ideas, and things I'm working through. No fixed schedule.</p>
+  </div>
+
+  <div class="post-list">
+    <div class="post-item">
+      <div>
+        <a href="https://medium.com/@treasuremayowa/building-a-chrome-extension-to-help-you-ensure-your-digital-safety-ce5775a07049" class="post-title" target="_blank">Building a Chrome Extension To Help You Ensure Your Digital Safety</a>
+        <p class="post-excerpt">Accept our privacy to continue.</p>
+      </div>
+      <div class="post-meta">
+        <span class="post-tag">Notes</span>
+        <span class="post-date">Nov 2 2023</span>
+      </div>
+    </div>
+    <div class="post-item">
+      <div>
+        <a href="https://medium.com/@treasuremayowa/rewriting-the-code-of-life-prime-editings-breakthrough-approach-50d4d6d6e90a" class="post-title" target="_blank">Rewriting the Code of Life: Prime Editing's Breakthrough Approach</a>
+        <p class="post-excerpt">Every living organism is shaped by its genes. But what if I told you there was a way to essentially hack your genes?</p>
+      </div>
+      <div class="post-meta">
+        <span class="post-tag">Essay</span>
+        <span class="post-date">Jun 1 2023</span>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>Treasure Mayowa &middot; 2026</span>
+    <a href="index.html">&larr; Back to home</a>
+  </footer>
+</div>
+</body>
+</html>
